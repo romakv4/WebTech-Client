@@ -7,7 +7,7 @@ $("#login").click(function () {
     type: type
   };
   $.ajax({
-    url: "../server/serverRouting.php",
+    url: "http://crudapp/server/serverRouting.php",
     type: "POST",
     data: message,
     success: function(data) {
@@ -24,7 +24,7 @@ $("#login").click(function () {
           type: type
         };
         $.ajax({
-          url: "../server/serverRouting.php",
+          url: "http://crudapp/server/serverRouting.php",
           type: "POST",
           data: message,
           success: function(data) {
@@ -32,7 +32,7 @@ $("#login").click(function () {
               $('#result').html("Неверный пароль");
             }
             if (JSON.parse(data) == "ok") {
-              $('#result').html('<a href="./phpclientchangepass.php">Сменить пароль</a></br><a href="./phpclientdeleteuser.php">Удалить аккаунт</a>');
+              $('#result').html('<a href="./phpclientchangepass.html">Сменить пароль</a></br><a href="./phpclientdeleteuser.html">Удалить аккаунт</a>');
             }
           }
         })

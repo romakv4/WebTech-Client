@@ -7,7 +7,7 @@ $("#deleteUser").click(function () {
       type: type
     };
     $.ajax({
-      url: "../server/serverRouting.php",
+      url: "http://crudapp/server/serverRouting.php",
       type: "POST",
       data: message,
       success: function(data) {
@@ -24,11 +24,11 @@ $("#deleteUser").click(function () {
             type: type
           };
           $.ajax({
-            url: "../server/serverRouting.php",
+            url: "http://crudapp/server/serverRouting.php",
             type: "POST",
             data: message,
             success: function(data) {
-              if (JSON.parse(data) == "OK") {
+              if (JSON.parse(data) == "ok") {
                 $('#result').html("Удаление прошло успешно");
               } else if (JSON.parse(data) == "wrongpwd") {
                 $('#result').html("Неверный пароль");

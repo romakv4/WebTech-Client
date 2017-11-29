@@ -11,7 +11,7 @@ $("#changePass").click(function () {
       type: type
     };
     $.ajax({
-      url: "../server/serverRouting.php",
+      url: "http://crudapp/server/serverRouting.php",
       type: "POST",
       data: message,
       success: function(data) {
@@ -28,7 +28,7 @@ $("#changePass").click(function () {
             type: type
           };
           $.ajax({
-            url: "../server/serverRouting.php",
+            url: "http://crudapp/server/serverRouting.php",
             type: "POST",
             data: message,
             success: function(data) {
